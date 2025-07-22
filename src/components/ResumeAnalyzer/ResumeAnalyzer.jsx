@@ -25,7 +25,9 @@ const ResumeAnalyzer = () => {
     try {
       setIsLoading(true);
       setError("");
-      const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+      // const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+      const API_BASE = process.env.REACT_APP_API_URL || "http://3.82.112.5:5000/";
+
 
       const response = await fetch(`${API_BASE}/analyze`, {
         method: "POST",
