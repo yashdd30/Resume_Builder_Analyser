@@ -1,0 +1,178 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffffff, #e879f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch; /* Make left and right columns equal height */
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional if you want to give different layout for analysis card */
+.analysisCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.uploadLabel {
+  display: block;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadBox {
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px dashed #9f7aea;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.uploadBox:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fileName {
+  margin-top: 0.5rem;
+  color: #34d399;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid #a78bfa;
+  resize: vertical;
+}
+
+.analyzeButton {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: linear-gradient(to right, #a78bfa, #f472b6);
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.analyzeButton:hover:not(:disabled) {
+  background: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+.analysisBox {
+  max-height: 520px; /* 💡 Adjust this value if needed */
+  min-height: 300px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #7c3aed;
+}
+
+.analysisResult {
+  white-space: pre-wrap;
+  color: #e0f2fe;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: "Fira Code", "JetBrains Mono", "Menlo", "Consolas", monospace;
+}
+
+.placeholder {
+  text-align: center;
+  color: #cbd5e1;
+  padding: 2rem;
+}
+
+.error {
+  margin-top: 0.5rem;
+  color: #f87171;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.footerLinks a {
+  color: #a78bfa;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
